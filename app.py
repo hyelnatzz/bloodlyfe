@@ -1,4 +1,5 @@
-from flask import Flask
+from flask import Flask, render_template
+from forms import *
 
 
 app = Flask(__name__)
@@ -9,57 +10,61 @@ def errorhandler(error):
 
 @app.route('/')
 def index():
-    return "Homepage"
+    return render_template('index.html')
 
 
 @app.route('/login')
 def login():
-    return "login page"
+    return render_template('authpages/login.html')
 
 
 @app.route('/register')
 def register():
-    return "Registration Page"
+    form = RegisterForm()
+    return render_template('authpages/register.html', form=form)
 
 
 @app.route('/reg-success')
 def registerSuccess():
-    return "Registration Success Page"
+    return render_template('authpages/regsuccess.html')
 
 
 @app.route('/dashboard')
 def dashboard():
-    return "Main Dashboard"
+    return render_template('userpages/maindashboard.html')
 
 
 @app.route('/profile-settings')
 def profileSettings():
-    return "Profile settings Page"
-
-
-@app.route('/donation-home')
-def donationHome():
-    return "Donation Homepage"
-
-
-@app.route('/match-success')
-def matchSuccess():
-    return "Match Success Page"
-
-
-@app.route('/donation-portal')
-def donationPortal():
-    return "Donation Portal Page"
-
-
-@app.route('/request-portal')
-def requestPortal():
-    return "Request Portal Page"
+    return render_template('userpages/profilepersonaldetails.html')
 
 
 @app.route('/history')
 def medicalHistory():
-    return "Medical History Page"
+    return render_template('userpages/medicalhistory.html')
+
+
+@app.route('/donation-home')
+def donationHome():
+    return render_template('donationpages/donationhome.html')
+
+
+@app.route('/match-success')
+def matchSuccess():
+    return render_template('donationpages/donationnotify.html')
+
+
+@app.route('/donation-portal')
+def donationPortal():
+    return render_template('donationpages/donationportal.html')
+
+
+@app.route('/request-portal')
+def requestPortal():
+    return render_template('donationpages/requestportal.html')
+
+
+
 
 
 if __name__ == '__main__':

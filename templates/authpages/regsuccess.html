@@ -1,0 +1,24 @@
+{% include "./base.html" %}
+{% block content %}
+    <div style="margin: 100px auto;">
+        <div class="row">
+            <div class="col" style="margin-top: -30px;">
+                <div class="container">
+                    <div class="row" style="width: 80%;margin: 0 auto;">
+                        <div class="col">
+                            <div style="height: 100%;text-align: center;padding-top: 10%;">
+                                <div><img class="swing animated" src={{ url_for("static", filename="img/success.svg") }} style="margin-bottom: 15px;"></div>
+                                <h3 class="text-center" style="color: #D32F2F;">Verify your Email Address to</h3>
+                                <h3 class="text-center" style="color: #D32F2F;">Finish Signing up on BloodLyfe</h3>
+                                <div style="margin: 0 auto;width: 50%;margin-top: 20px;">
+                                    <p class="text-center" style="font-size: 16px;color: black;">Hello, Please check your email address for a link to verify your account and get started <br></p>
+                                    <div><a href={{ url_for("dashboard") }} style="color: #D32F2F;text-decoration: none;font-weight: 700;">Go to Dashboard</a></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

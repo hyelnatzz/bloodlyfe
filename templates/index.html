@@ -1,0 +1,130 @@
+{% include "base.html" %}
+
+{% block content %}
+    <div class="row">
+        <div class="col">
+            <div class="container">
+                <nav class="navbar navbar-light navbar-expand-lg fixed-top bg-white navbar-custom" style="padding: 16px;padding-left: 40px;padding-right: 40px;">
+                    <div class="container">
+                        <div class="container">
+                            <a class="navbar-brand" href="#"><img data-bs-hover-animate="jello" src={{ url_for("static", filename="img/first/bloodlyfe1.svg") }} style="height: 80px;"></a>
+                            <button data-toggle="collapse" class="navbar-toggler" data-target="#navbarResponsive"><span class="navbar-toggler-icon"></span></button>
+                            <div class="collapse navbar-collapse" id="navbarResponsive" style="padding-left: 40px;">
+                                <a href="#" style="margin-left: 40px;margin-right: 40px;color: #d32f2f;font-weight: bold;font-size: 14px;">HOME</a>
+                                <a href="#" style="margin-right: 29px;color: rgb(211,47,47);font-weight: bold;font-size: 14px;">ABOUT US</a>
+                                <a href="#" style="font-weight: bold;color: rgb(211,47,47);font-size: 14px;">SERVICES</a>
+                                <a href="#" style="margin-right: 0px;margin-left: 41px;font-style: normal;font-weight: bold;color: rgb(211,47,47);font-size: 14px;">CAMPAIGNS</a>
+                                    <ul class="nav navbar-nav ml-auto">
+                                        <li class="nav-item" role="presentation"></li>
+                                        <li class="nav-item" role="presentation"></li>
+                                    </ul>
+                                    <a href={{ url_for("login") }} class="btn btn-primary btn-lg border rounded border-danger shadow-none" type="button" style="background-color: #fffefe;color: rgb(211,47,47);font-weight: bold;height: 42px;font-size: 14px;width: 150px;">LOG IN</a>
+                                    <a href={{ url_for("register") }} class="btn btn-primary border rounded border-white shadow-none" type="button" style="margin-left: 50px;background-color: #dc3545;color: white;font-weight: bold;height: 42px;font-size: 14px;width: 150px;">Get Started</a>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </div>
+    <div class="row" style="margin-top: 250px;margin-right: 0px;margin-left: 0px;margin-bottom: 45px;">
+        <div class="col" style="margin-bottom: 60px;">
+            <div class="container">
+                <div class="row">
+                    <div class="col" style="padding-left: 53px;">
+                        <h1 class="display-3 pulse animated" style="font-weight: 400;"><strong>Save a life today. Give Blood.</strong></h1>
+                        <p style="font-size: 29px;">Every Blood Donation Is Critical And You Can Make A Life Saving Difference.</p>
+                        <a href={{ url_for("register") }} class="btn btn-primary border rounded border-white shadow-none" type="button" style="margin-left: 0px;background-color: #dc3545;color: white;font-weight: bold;height: 42px;font-size: 14px;width: 150px;">Get Started</a>
+                        <a href={{ url_for("login") }} class="btn btn-primary btn-lg border rounded border-danger shadow-none" type="button" style="background-color: #fffefe;color: rgb(211,47,47);font-weight: bold;height: 42px;font-size: 14px;width: 150px;margin-left: 58px;">LOG IN</a>
+                    </div>
+                    <div class="col col-md-5 d-sm-none d-md-block" style="position: relative;"><img src={{ url_for("static", filename="img/first/i1.png") }} style="height: 400px;z-index: 3;">
+                        <div style="width: 340px;height: 440px;position: absolute;top: -20px;left: 81px;border: 1px solid #D32F2F;border-radius: 20px;z-index: -1;"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr style="width: 100vw;background-color: #e7e7e7;">
+    <div class="row">
+        <div class="col" style="width: 100vw;margin-bottom: 45px;">
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <h3 class="text-center" style="color: rgb(220,53,69);margin-bottom: 31px;"><strong>Our Partners</strong></h3>
+                        <div class="row ml-4">
+                            <div class="col" style="padding-top: 30px;"><img src={{ url_for("static", filename="img/first/p1.png") }} style="width: 200px;"></div>
+                            <div class="col"><img src={{ url_for("static", filename="img/first/p2.png") }} style="width: 200px;"></div>
+                            <div class="col" style="padding-top: 20px;"><img src={{ url_for("static", filename="img/first/p3.png") }} style="width: 200px;"></div>
+                            <div class="col"><img src={{ url_for("static", filename="img/first/p4.png") }}></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr style="background-color: #e7e7e7;margin-bottom: 63px;width: 100vw;">
+    <div class="row">
+        <div class="col" style="width: 100vw;">
+            <div class="container" style="padding: 3px;padding-right: 25px;padding-left: 25px;">
+                <div class="row">
+                    <div class="col" style="padding-left: 34px;">
+                        <h1 style="color: rgb(220,53,69);">The Best Way to save Life</h1>
+                        <hr style="border-width: 2px;float: left;width: 20%;background-color: #dc3545;margin-top: -3px;">
+                        <p style="clear: both;font-size: 23px;margin-bottom: 0px;">The availability of blood is an important concern in our society because of how life-threatening lack of blood can be especially in situations where the person has every chance to survive but for blood.<br><br>BloodLyfe is bridging
+                            the gap to save lives in Nigeria the best way by matching suitable blood donors to recipients.<br><br></p>
+                        <a href={{ url_for("register") }} class="btn btn-primary border rounded border-white shadow-none" type="button" style="margin-left: 0px;background-color: #dc3545;color: white;font-weight: bold;height: 42px;font-size: 14px;width: 150px;">Get Started</a></div>
+                    <div class="col col-sm-12 col-md-6 d-sm-none d-md-block"><img src={{ url_for("static", filename="img/first/i2.png") }} style="width: 100%;"></div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <hr style="background-color: #e7e7e7;margin-top: 30px;margin-right: 0px;margin-bottom: 50px;width: 100vw;">
+    <div class="row">
+        <div class="col" style="width: 100vw;">
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <div style="text-align: center;height: 100px;margin-bottom: 15px;">
+                            <div class="border rounded-circle" style="padding-top: 15px;width: 100px;height: 100px;background-color: rgba(224, 239, 254, 0.76);margin: auto;"><img data-bs-hover-animate="jello" src={{ url_for("static", filename="img/icons/blood-drop.png") }}></div>
+                        </div>
+                        <p class="text-center">Why Give Blood?</p>
+                    </div>
+                    <div class="col">
+                        <div style="text-align: center;margin-bottom: 15px;">
+                            <div style="padding-top: 15px;width: 100px;height: 100px;background-color: rgba(224, 239, 254, 0.76);margin: auto;border-radius: 50%;"><img data-bs-hover-animate="jello" src={{ url_for("static", filename="img/icons/blood-drop2.png") }}></div>
+                        </div>
+                        <p class="text-center">How To Give Blood?</p>
+                    </div>
+                    <div class="col">
+                        <div style="text-align: center;margin-bottom: 15px;">
+                            <div style="padding-top: 15px;width: 100px;height: 100px;background-color: rgba(224, 239, 254, 0.76);margin: auto;border-radius: 50%;"><img data-bs-hover-animate="jello" src={{ url_for("static", filename="img/icons/blood-drop3.png") }}></div>
+                        </div>
+                        <p class="text-center">Can I Give Blood?</p>
+                    </div>
+                    <div class="col">
+                        <div style="text-align: center;margin-bottom: 15px;">
+                            <div style="width: 100px;height: 100px;background-color: rgba(224, 239, 254, 0.76);margin: auto;border-radius: 50%;padding-top: 15PX;"><img data-bs-hover-animate="jello" src={{ url_for("static", filename="img/icons/blood-drop4.png") }}></div>
+                        </div>
+                        <p class="text-center">Preparation &amp; After Care?</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr style="background-color: #e7e7e7;margin-top: 25px;margin-bottom: 25px;width: 100vw;">
+    <div class="row">
+        <div class="col">
+            <div class="container" style="padding: 3px;padding-right: 25px;padding-left: 25px;">
+                <div class="row" style="background-color: #d43434;color: rgb(242,242,242);padding: 100px 0 50px 0;">
+                    <div class="col col-sm-12 col-md-6 d-sm-none d-md-block" style="padding-left: 170px;"><img src={{ url_for("static", filename="img/first/Rectangle17.png") }} style="width: 350px;"></div>
+                    <div class="col">
+                        <h1 style="color: rgb(248,248,248);">Our Solution</h1>
+                        <hr style="border-width: 3px;float: left;width: 25%;background-color: #ffffff;margin-top: -3px;">
+                        <p style="clear: both;font-size: 23px;margin-bottom: 0px;color: rgb(247,247,247);">BloodLyfe helps blood donors and recipients communicate directly<br><br>BloodLyfe provides donors and recipients with information to maintain healthy lifestyle.<br><br>BloodLyfe makes blood available through donors to avoid lack
+                            or scarcity of blood in Nigeria <br><br></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

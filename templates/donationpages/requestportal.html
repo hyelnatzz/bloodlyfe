@@ -1,0 +1,56 @@
+{% include "./base.html" %}
+{% block content %}
+<div style="width: 100%;text-align: right;margin-top: 30px;"><a href={{ url_for("index") }} style="margin-right: 50px;text-decoration: none;font-weight: 500;color: #D32F2F;">Go Back to Dashboard</a></div>
+    <div style="margin: 50px auto;">
+        <h1 style="padding-left: 0px;font-size: 28px;font-weight: 700;margin-left: 110px;margin-top: -25px;padding-top: 0px;margin-bottom: 0px;">Blood Request Portal</h1>
+        <div class="row" style="margin-right: -15px;">
+            <div class="col" style="margin-top: 30px;">
+                <div class="container" style="font-size: 18px;margin-top: 0px;">
+                    <div class="row" style="width: 80%;margin: 0 auto;">
+                        <div class="col-lg-4" style="border: 1px solid #e8e8e8;padding: 20px;border-radius: 15px;box-shadow: 1px 1px 5px #e8e8e8;color: black;padding-right: 0px;margin-right: 30px;">
+                            <div style="height: 100%;">
+                                <div class="row">
+                                    <div class="col-lg-2"><img src={{ url_for("static", filename="img/unsplash_iFgRcqHznqg.png") }}></div>
+                                    <div class="col" style="margin-left: 16px;">
+                                        <p style="margin-bottom: 1px;font-size: 14px;margin-top: 7px;">Oluwafemi Sanni</p>
+                                        <p style="margin-bottom: 0px;font-size: 12px;">Lagos, Nigeria</p>
+                                    </div>
+                                </div>
+                                <div style="font-size: 20px;margin-top: 28px;">
+                                    <p style="font-size: 12px;margin-bottom: 4px;color: #200e32;"><strong>Primary Address</strong></p>
+                                    <p style="font-size: 14px;color: rgb(154,154,154);width: 70%;">2A, McDonald Akano Street, Omole Phase 1, Lagos<br></p>
+                                </div>
+                                <div style="font-size: 20px;margin-top: 20px;">
+                                    <p style="font-size: 12px;margin-bottom: 4px;color: #200e32;"><strong>Blood Group</strong></p>
+                                    <p style="font-size: 14px;color: rgb(154,154,154);">O+</p>
+                                </div>
+                                <div style="font-size: 20px;margin-top: 20px;">
+                                    <p style="font-size: 12px;margin-bottom: 4px;color: #200e32;"><strong>Genotype</strong></p>
+                                    <p style="font-size: 14px;color: rgb(154,154,154);">AA<br></p>
+                                </div>
+                                <div style="font-size: 20px;margin-top: 20px;">
+                                    <p style="font-size: 12px;margin-bottom: 4px;color: #200e32;"><strong>Contact Phone Number</strong></p>
+                                    <p style="font-size: 14px;color: rgb(154,154,154);">08166096074</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col" style="padding: 0 60px;padding-right: 0px;padding-left: 0px;border: 1px solid #e8e8e8;padding: 20px;border-radius: 15px;box-shadow: 1px 1px 5px #e8e8e8;color: black;padding-right: 20px;padding-left: 36px;">
+                            <h1 style="font-weight: 700;font-size: 24px;margin-bottom: 15px;color: #001427;">Request Blood</h1>
+                            <form>
+                                <div class="form-group" style="margin-bottom: 10px;"><label style="font-size: 12px;"><strong>Hospital</strong></label><select class="form-control" style="font-size: 12px;"><optgroup label="select a laboratory near you"><option value="12" selected="">Newage laboratory</option><option value="13">This is item 2</option><option value="14">This is item 3</option></optgroup></select></div>
+                                <div
+                                    class="form-group" style="margin-bottom: 10px;"><label style="font-size: 12px;"><strong>Landmark</strong></label><select class="form-control" style="font-size: 12px;"><optgroup label="select a landmark close to you"><option value="12" selected="">Market square</option><option value="13">This is item 2</option><option value="14">This is item 3</option></optgroup></select></div>
+                        <div
+                            class="form-group"><label style="font-size: 12px;"><strong>Request Message</strong></label><textarea class="form-control form-control-lg" style="font-size: 12px;">Message...</textarea></div>
+                    <div class="form-group">
+                        <div class="form-check" style="margin-left: 24px;width: 70%;"><input class="form-check-input" type="checkbox" id="formCheck-1"><label class="form-check-label" for="formCheck-1" style="font-size: 11px;">By clicking this box, you have agreed to donate blood and save a life around your landmark<br></label></div>
+                    </div>
+                    <div class="form-group" style="text-align: right;"><button class="btn btn-primary btn-lg" type="button" style="font-size: 14px;padding: 16px;height: 45px;border-color: #001427;background-color: #001427;padding-top: 12px;margin-top: 10px;width: 140px;"><strong>Request</strong><br></button></div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    </div>
+{% endblock %}

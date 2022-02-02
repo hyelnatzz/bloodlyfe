@@ -1,0 +1,36 @@
+.btn:focus, .btn:active, .btn {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+a:hover {
+  text-decoration: none !important;
+  cursor: pointer;
+}
+
+.red-btn {
+  border-color: #d32f2f;
+  background-color: #d32f2f;
+}
+
+.white-btn {
+  border-color: #d32f2f;
+  background-color: whitesmoke;
+}
+
+.btn.btn-primary.btn-lg.border.rounded.border-danger.shadow-none {
+}
+
+.btn.btn-primary.border.rounded.border-white.shadow-none {
+}
+
+.form-control.form-control-lg {
+}
+
+.form-control.form-control-lg {
+}
+
+.form-control.form-control-lg:focus {
+  outline-color: #D32F2F;
+}
+

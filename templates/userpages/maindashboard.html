@@ -1,0 +1,160 @@
+{% include "./base.html" %}
+
+{% block content %}
+    <div class="row">
+        <div class="col-lg-2" style="background-color: #D32F2F;">
+            <div style="width: 100%;height: 100vh;padding-top: 52%;">
+                <div style="margin: 0 auto;">
+                    <div class="container" style="text-align: center;padding-left: 20px;">
+                        <button class="btn btn-primary btn-lg border rounded border-danger shadow-none" type="button" style="background-color: black;color: white;font-weight: bold;height: 42px;font-size: 14px;width: 150px;margin-bottom: 25px;">Overview</button>
+                        <button class="btn btn-primary btn-lg border rounded border-danger shadow-none" type="button" style="background-color: #fffefe;color: rgb(4,4,4);font-weight: bold;height: 42px;font-size: 14px;width: 150px;margin-bottom: 25px;">Profile</button>
+                        <button class="btn btn-primary btn-lg border rounded border-danger shadow-none" type="button" style="background-color: #fffefe;color: rgb(17,16,16);font-weight: bold;height: 42px;font-size: 14px;width: 150px;margin-bottom: 25px;">Medical History</button>
+                        <button  class="btn btn-primary btn-lg border rounded border-danger shadow-none" type="button" style="background-color: #fffefe;color: rgb(2,2,2);font-weight: bold;height: 42px;font-size: 14px;width: 150px;margin-bottom: 25px;">Messages</button>
+                        <button class="btn btn-primary btn-lg border rounded border-danger shadow-none" type="button" style="background-color: #fffefe;color: rgb(9,9,9);font-weight: bold;height: 42px;font-size: 14px;width: 150px;">Help &amp; Support</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="container" style="margin-top: 30px;">
+                <div class="row">
+                    <div class="col-lg-4">
+                        <h3 style="margin-top: 18px;font-weight: 700;">Hello Oluwafemi</h3>
+                    </div>
+                    <div class="col">
+                        <div class="row">
+                            <div class="col-lg-4" style="padding-top: 22px;">
+                                <a href="#"><img src={{ url_for("static", filename="img/icons/envelope.svg") }} style="margin-right: 35px;height: 22px;"></a>
+                                <a href="#"><img src={{ url_for("static", filename="img/icons/bell.svg") }} style="height: 25px;margin-left: 16px;"></a>
+                            </div>
+                            <div class="col col-lg-8" style="padding-left: 40px;">
+                                <div class="row" style="background-color: black;padding: 15px;border-radius: 15px;margin-right: 45px;padding-left: 0px;height: 80px;width: 298px;">
+                                    <div class="col-lg-4 offset-lg-0" style="padding: 0px;padding-right: 0px;padding-left: 31px;">
+                                        <img src={{ url_for("static", filename="img/first/Ellipse1.png") }} style="height: 50px;margin-top: 1px;"></div>
+                                    <div class="col-lg-8" style="padding-left: 0px;margin-left: 0px;">
+                                        <h2 class="display-1" style="font-size: 18px;color: rgb(252,252,252);margin: 1px;margin-bottom: 11px;margin-top: 3px;">Oluwafemi Sanni</h2>
+                                        <p style="font-size: 14px;margin-bottom: 0px;margin-top: -8px;color: rgb(245,245,245);">Lagos. Nigeria</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row" style="border-radius: 15px;background-color: #D32F2F;color: white;padding: 25px;margin-left: 0px;margin-right: 83px;margin-top: 55px;">
+                    <div class="col-lg-7">
+                        <h1 style="font-size: 24px;font-weight: 700;margin-bottom: 0px;">Welcome to your Dashboard<br><br></h1>
+                        <p style="margin-top: -19px;font-size: 12px;width: 80%;">Go through your BloodLyfe dashboard to catch up on events missed, request or donate blood and how you can be of help.<br></p>
+                        <div class="row">
+                            <div class="col col-md-6" style="padding-right: 0px;"><button class="btn btn-primary btn-lg border rounded border-danger shadow-none" type="button" style="background-color: #fffefe;color: rgb(211,47,47);font-weight: bold;height: 42px;font-size: 14px;width: 150px;">Request Blood</button></div>
+                            <div
+                                class="col col-md-6" style="padding-left: 0px;margin-left: -15px;"><button class="btn btn-primary btn-lg border rounded border-danger shadow-none" type="button" style="background-color: black;color: white;font-weight: bold;height: 42px;font-size: 14px;width: 150px;">Donate Blood</button></div>
+                    </div>
+                </div>
+                <div class="col-lg-5"></div>
+            </div>
+            <div class="row" style="margin-top: 55px;margin-right: 0px;margin-left: 0px;padding-top: 0px;">
+                <div class="col-lg-8 col-xl-7" style="margin-top: 0px;padding-left: 0px;">
+                    <div style="border: 1px solid #e8e8e8;padding: 20px;border-radius: 15px;box-shadow: 1px 1px 5px #e8e8e8;color: black;padding-right: 20px;padding-left: 36px;">
+                        <h3 style="color: rgb(4,4,4);font-weight: 700;font-size: 18px;">Medical History</h3>
+                        <p style="color: rgb(5,5,5);margin-top: -5px;font-size: 12px;">A brief introduction into your medical history <br></p>
+                        <div class="row">
+                            <div class="col-lg-2 col-sm-3" style="padding-right: 0px;margin-left: 0px;margin-right: 0px;padding-left: 15px;"><img src={{ url_for("static", filename="img/unsplash_jGmBZypoFPc.png") }} style="height: 45px;margin-top: 2px;"></div>
+                            <div class="col-lg-4 col-xl-6 col-sm-3" style="color: black;margin-left: -11px;padding-left: 0px;margin-right: 0px;margin-top: 0px;">
+                                <h5 style="font-size: 15px;color: #D32F2F;font-weight: 700;">Reddington Hospital</h5>
+                                <p style="margin-top: -3px;font-size: 16px;">Diagnosed of Typhoid</p>
+                            </div>
+                            <div class="col-xl-4 col-sm-3" style="margin-left: 0px;">
+                                <p style="font-size: 12px;">24/01/2022</p>
+                                <p style="font-size: 12px;margin-top: -11px;"><a href="#" style="font-weight: 700;font-size: 13px;color: black;text-decoration: none;margin-top: 0px;">View Details</a></p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-2 col-sm-3" style="padding-right: 0px;margin-left: 0px;margin-right: 0;"><img src={{ url_for("static", filename="img/unsplash_F7m3QZJ_4mg.png") }} style="height: 45px;margin-top: 2px;"></div>
+                            <div class="col-lg-4 col-xl-6 col-sm-3" style="color: black;margin-left: -11px;padding-left: 0px;">
+                                <h5 style="font-size: 15px;color: #D32F2F;font-weight: 700;">Evercare Hospital</h5>
+                                <p style="margin-top: -3px;font-size: 16px;">Donated Blood</p>
+                            </div>
+                            <div class="col-xl-4 col-sm-3">
+                                <p style="font-size: 12px;">24/01/2022</p>
+                                <p style="font-size: 12px;margin-top: -11px;"><a href="#" style="font-weight: 700;font-size: 13px;color: black;text-decoration: none;margin-top: 0px;">View Details</a></p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-2 col-sm-3" style="padding-right: 0px;margin-left: 0px;margin-right: 0px;"><img src={{ url_for("static", filename="img/unsplash_jGmBZypoFPc.png") }} style="height: 45px;margin-top: 2px;margin-left: 0px;"></div>
+                            <div class="col-lg-4 col-xl-6 col-sm-3" style="color: black;margin-left: -11px;padding-left: 0px;">
+                                <h5 style="font-size: 15px;color: #D32F2F;font-weight: 700;">Reddington Hospital</h5>
+                                <p style="margin-top: -3px;font-size: 16px;">Diagnosed of Typhoid</p>
+                            </div>
+                            <div class="col-xl-4 col-sm-3">
+                                <p style="font-size: 12px;">24/01/2022</p>
+                                <p style="font-size: 12px;margin-top: -11px;"><a href="#" style="font-weight: 700;font-size: 13px;color: black;text-decoration: none;margin-top: 0px;">View Details</a></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div style="border: 1px solid #e8e8e8;padding: 20px;border-radius: 15px;box-shadow: 1px 1px 5px #e8e8e8;color: black;padding-right: 20px;padding-left: 36px;margin-top: 40px;">
+                        <h3 style="color: rgb(4,4,4);font-weight: 700;font-size: 18px;">Blood Donation History</h3>
+                        <p style="color: rgb(5,5,5);margin-top: -5px;font-size: 12px;">A brief introduction into your medical history <br></p>
+                        <div class="row">
+                            <div class="col-lg-2 col-sm-3" style="padding-right: 0px;margin-left: 0px;margin-right: 0px;"><img src={{ url_for("static", filename="img/unsplash_F7m3QZJ_4mg.png") }} style="height: 45px;margin-top: 2px;"></div>
+                            <div class="col-lg-4 col-xl-6 col-sm-3" style="color: black;margin-left: -12px;padding-left: 0px;">
+                                <h5 style="font-size: 15px;color: #D32F2F;font-weight: 700;">Evercare Hospital</h5>
+                                <p style="margin-top: -3px;font-size: 16px;">Donated Blood</p>
+                            </div>
+                            <div class="col-xl-4 col-sm-3">
+                                <p style="font-size: 12px;">24/01/2022</p>
+                                <p style="font-size: 12px;margin-top: -11px;"><a href="#" style="font-weight: 700;font-size: 13px;color: black;text-decoration: none;margin-top: 0px;">View Details</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-xl-4" style="border: 1px solid #e8e8e8;border-radius: 15px;box-shadow: 1px 1px 5px #e8e8e8;color: black;padding-right: 0px;padding-left: 30px;margin-left: 15px;padding-top: 20px;">
+                    <h3 style="color: rgb(4,4,4);font-weight: 700;font-size: 18px;">Top Donors</h3>
+                    <p style="color: rgb(5,5,5);margin-top: -5px;font-size: 12px;">Top Donors in your location</p>
+                    <div class="row">
+                        <div class="col-lg-4 col-xl-3 col-sm-6"><img src={{ url_for("static", filename="img/unsplash_iFgRcqHznqg.png") }} style="height: 45px;"></div>
+                        <div class="col-lg-8 col-sm-6" style="padding-left: 0px;">
+                            <h1 style="font-size: 16px;font-weight: 400;margin-top: 1px;">Ango Mustapha</h1>
+                            <p style="font-size: 12px;margin-top: -5px;margin-bottom: 15px;">Lagos, Nigeria</p>
+                        </div>
+                    </div>
+                    <div class="row" style="margin-top: 12px;">
+                        <div class="col-lg-4 col-xl-3 col-sm-6"><img src={{ url_for("static", filename="img/unsplash_iFgRcqHznqg.png") }} style="height: 45px;"></div>
+                        <div class="col-lg-8 col-sm-6" style="padding-left: 0px;">
+                            <h1 style="font-size: 16px;font-weight: 400;margin-top: 1px;">Ango Mustapha</h1>
+                            <p style="font-size: 12px;margin-top: -5px;margin-bottom: 15px;">Lagos, Nigeria</p>
+                        </div>
+                    </div>
+                    <div class="row" style="margin-top: 12px;">
+                        <div class="col-lg-4 col-xl-3 col-sm-6"><img src={{ url_for("static", filename="img/unsplash_iFgRcqHznqg.png") }} style="height: 45px;"></div>
+                        <div class="col-lg-8 col-sm-6" style="padding-left: 0px;">
+                            <h1 style="font-size: 16px;font-weight: 400;margin-top: 1px;">Ango Mustapha</h1>
+                            <p style="font-size: 12px;margin-top: -5px;margin-bottom: 15px;">Lagos, Nigeria</p>
+                        </div>
+                    </div>
+                    <div class="row" style="margin-top: 12px;">
+                        <div class="col-lg-4 col-xl-3 col-sm-6"><img src="assets/img/unsplash_iFgRcqHznqg.png" style="height: 45px;"></div>
+                        <div class="col-lg-8 col-sm-6" style="padding-left: 0px;">
+                            <h1 style="font-size: 16px;font-weight: 400;margin-top: 1px;">Ango Mustapha</h1>
+                            <p style="font-size: 12px;margin-top: -5px;margin-bottom: 15px;">Lagos, Nigeria</p>
+                        </div>
+                    </div>
+                    <div class="row" style="margin-bottom: 0px;margin-top: 12px;">
+                        <div class="col-lg-4 col-xl-3 col-sm-6"><img src="assets/img/unsplash_iFgRcqHznqg.png" style="height: 45px;"></div>
+                        <div class="col-lg-8 col-sm-6" style="padding-left: 0px;">
+                            <h1 style="font-size: 16px;font-weight: 400;margin-top: 1px;">Ango Mustapha</h1>
+                            <p style="font-size: 12px;margin-top: -5px;margin-bottom: 15px;">Lagos, Nigeria</p>
+                        </div>
+                    </div>
+                    <div class="row" style="margin-top: 12px;">
+                        <div class="col-lg-4 col-xl-3 col-sm-6"><img src="assets/img/unsplash_iFgRcqHznqg.png" style="height: 45px;"></div>
+                        <div class="col-lg-8 col-sm-6" style="padding-left: 0px;">
+                            <h1 style="font-size: 16px;font-weight: 400;margin-top: 1px;">Ango Mustapha</h1>
+                            <p style="font-size: 12px;margin-top: -5px;margin-bottom: 15px;">Lagos, Nigeria</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+{% endblock %}
