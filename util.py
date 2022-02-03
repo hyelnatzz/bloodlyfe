@@ -14,6 +14,4 @@ def bloodMatched(recipient, donor):
     return donor == recipient or donor in blood_match[recipient]
 
 
-
-
-
+print(bloodMatched("B-", "B+"))

@@ -150,7 +150,13 @@ def registerSuccess():
 @app.route('/dashboard')
 @login_required
 def dashboard():
-    return render_template('userpages/maindashboard.html')
+    donors = User.query.all()
+    donors = list(filter(lambda x:int(x.donation_count) > 0, donors))
+    if len(donors) > 10:
+        top_donors = donors[:10]
+    else: 
+        top_donors = donors[:len(donors)]
+    return render_template('userpages/maindashboard.html', top_donors = top_donors)
 
 
 @app.route('/profile-settings', methods=["POST", "GET"])
@@ -199,7 +205,10 @@ def donationHome():
 
 
 @app.route('/match-success')
-def matchSuccess(user):
+def matchSuccess():
+    user_id = request.args.get("user")
+    user = User.query.filter_by(id=user_id).first()
+    print(user)
     return render_template('donationpages/donationnotify.html', user = user)
 
 
@@ -208,7 +217,7 @@ def matchSuccess(user):
 def donationPortal():
     form = DonationForm()
     if form.validate_on_submit():
-        current_user.donation_count = current_user.donation_count + 1
+        current_user.donation_count = int(current_user.donation_count) + 1
         db.session.commit()
         return redirect(url_for("dashboard"))
     return render_template('donationpages/donationportal.html', form = form)
@@ -223,7 +232,7 @@ def requestPortal():
         for user in users:
             if current_user.email != user.email and bloodMatched(current_user.bloodgroup.name, user.bloodgroup.name) and user.city == current_user.city:
                 print("Hurray matched")
-                return redirect(url_for("matchSuccess", user=user))
+                return redirect(url_for("matchSuccess", user=user.id))
             else: 
                 print("No match found")
 
