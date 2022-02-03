@@ -1,6 +1,5 @@
 from flask_wtf import FlaskForm
 from wtforms import StringField, PasswordField, SubmitField, SelectField, BooleanField,TextAreaField
-from wtforms.fields.html5 import TelField, EmailField
 from wtforms.validators import InputRequired, Length
 
 
@@ -9,13 +8,13 @@ class RegisterForm(FlaskForm):
                         InputRequired(message="first name is required")])
     last_name = StringField("Last Name", validators=[
                         InputRequired(message="last name is required")])
-    email = EmailField("Email", validators=[
+    email = StringField("Email", validators=[
                         InputRequired(message="email is required")])
     password = PasswordField("Password", validators=[
                         InputRequired(message="password is required"),
                         Length(min=8, message="minimum of 8 characters")])
-    phone = TelField("Phone", validators=[InputRequired(message="phone number is required")])
-    email = EmailField("Email", validators=[
+    phone = StringField("Phone", validators=[InputRequired(message="phone number is required")])
+    email = StringField("Email", validators=[
         InputRequired(message="email is required")])
     address = StringField("Primary Address", validators=[
         InputRequired(message="primary address is required")])
@@ -32,7 +31,7 @@ class RegisterForm(FlaskForm):
 
 
 class LoginForm(FlaskForm):
-    email = EmailField("Email", validators=[
+    email = StringField("Email", validators=[
         InputRequired(message="email is required")])
     password = PasswordField("Password", validators=[
         InputRequired(message="password is required")])
@@ -42,7 +41,7 @@ class LoginForm(FlaskForm):
 class ProfileUpdateForm(FlaskForm):
     full_name = StringField("Full Name", validators=[
         InputRequired(message="first name is required")])
-    email = EmailField("Email", validators=[
+    email = StringField("Email", validators=[
         InputRequired(message="email is required")])
     address = StringField("Primary Address", validators=[
         InputRequired(message="primary address is required")])
