@@ -6,11 +6,12 @@
             <div style="width: 100%;height: 100vh;padding-top: 52%;">
                 <div style="margin: 0 auto;">
                     <div class="container" style="text-align: center;padding-left: 20px;">
-                        <button class="btn btn-primary btn-lg border rounded border-danger shadow-none" type="button" style="background-color: #fffefe;color: rgb(4,4,4);font-weight: bold;height: 42px;font-size: 14px;width: 150px;margin-bottom: 25px;">Overview</button>
-                        <button class="btn btn-primary btn-lg border rounded border-danger shadow-none" type="button" style="background-color: #fffefe;color: rgb(4,4,4);font-weight: bold;height: 42px;font-size: 14px;width: 150px;margin-bottom: 25px;">Profile</button>
-                        <button class="btn btn-primary btn-lg border rounded border-danger shadow-none" type="button" style="background-color: black;color: white;font-weight: bold;height: 42px;font-size: 14px;width: 150px;margin-bottom: 25px;">Medical History</button>
+                        <a href={{ url_for("dashboard") }}  class="btn btn-primary btn-lg border rounded border-danger shadow-none" type="button" style="background-color: #fffefe;color: rgb(4,4,4);font-weight: bold;height: 42px;font-size: 14px;width: 150px;margin-bottom: 25px;">Overview</a>
+                        <a href={{ url_for("profileSettings") }}  class="btn btn-primary btn-lg border rounded border-danger shadow-none" type="button" style="background-color: #fffefe;color: rgb(4,4,4);font-weight: bold;height: 42px;font-size: 14px;width: 150px;margin-bottom: 25px;">Profile</>
+                        <a href={{ url_for("medicalHistory") }}  class="btn btn-primary btn-lg border rounded border-danger shadow-none" type="button" style="background-color: black;color: white;font-weight: bold;height: 42px;font-size: 14px;width: 150px;margin-bottom: 25px;">Medical History</a>
                         <button class="btn btn-primary btn-lg border rounded border-danger shadow-none" type="button" style="background-color: #fffefe;color: rgb(2,2,2);font-weight: bold;height: 42px;font-size: 14px;width: 150px;margin-bottom: 25px;">Messages</button>
                         <button class="btn btn-primary btn-lg border rounded border-danger shadow-none" type="button" style="background-color: #fffefe;color: rgb(9,9,9);font-weight: bold;height: 42px;font-size: 14px;width: 150px;">Help &amp; Support</button>
+                                                <a href={{ url_for("logout")}} class="btn btn-primary btn-lg border rounded border-danger shadow-none" type="button" style="background-color: black;color: white;font-weight: bold;height: 42px;font-size: 14px;width: 150px;margin-bottom: 25px;margin-top: 30px;">Logout</a>
                     </div>
                 </div>
             </div>

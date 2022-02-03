@@ -1,6 +1,7 @@
 {% extends "./base.html" %}
 {% block title %} Register {% endblock %}
 {% block content %}
+{{ get_flashed_messages() }}
     <div style="width: 100%;text-align: right;margin-top: 30px;"><a href={{ url_for("index") }} style="margin-right: 50px;text-decoration: none;font-weight: 500;text-transform: uppercase;color: #D32F2F;">HOME</a></div>
     <div style="margin: 100px auto;">
         <div class="row">
@@ -10,10 +11,10 @@
                         <div class="col" style="background-color: #D32F2F;padding-left: 50px;">
                             <div style="height: 100%;text-align: center;padding-top: 70%;">
                                 <h1 class="text-left" style="font-weight: 700;color: white;font-size: 3.5em;">Hello!</h1>
-                                <p class="text-left" style="font-size: 16px;color: rgb(253,253,253);width: 80%;">Welcome to BloodLyfe. Join us as we save millions of life by donating blood to the needy.<br><br></p>
+                                <p class="text-left" style="font-size: 16px;color: rgb(253,253,253);width: 80%;">Welcome to BloodLyfe. Join us as we save millions of lives by donating blood to the needy.<br><br></p>
                             </div>
                         </div>
-                        <div class="col" style="padding: 0 60px;padding-top: 40px;">
+                        <div class="col" style="padding: 0 60px;padding-top: 20px;">
                             <h3 style="text-align: left;color: #D32F2F;font-size: 16px;">Create Account</h3>
                             <p style="text-align: left;margin-bottom: 18px;margin-top: -5px;font-size: 12px;">Lets get started😉</p>
                             <form action={{ url_for("register")}} method="POST">
@@ -34,8 +35,32 @@
                                 <div class="form-group">
                                     {{ form.phone(class="form-control form-control-lg", type="tel", placeholder="Phone Number", style="height: 39px;border-color: #D32F2F;margin: 0px;font-size: 14px;") }}
                                 </div>
-                                <div class="form-group">
+                                <div class="form-group" style="margin-bottom: 0;">
                                     {{ form.password(class="form-control form-control-lg", placeholder="password", style="height: 40px;border-color: #D32F2F;margin-bottom: 0px;font-size: 14px;") }}
+                                </div>
+                                <div class="form-group" style="margin-bottom: 0;">
+                                    {{ form.address.label(style="text-align: left;margin-bottom: 18px;margin-top: -5px;font-size: 12px; margin-bottom: 0; margin-top: 0") }}
+                                    {{ form.address(class="form-control form-control-lg", placeholder="Address", style="height: 40px;border-color: #D32F2F;margin-bottom: 0px;font-size: 14px;") }}
+                                </div>
+                                <div class="form-group" style="margin-bottom: 0;">
+                                    {{ form.country.label(style="text-align: left;margin-bottom: 18px;margin-top: -5px;font-size: 12px;  margin-bottom: 0; margin-top: 0") }}
+                                    {{ form.country(class="form-control form-control-lg", style="height: 40px;border-color: #D32F2F;margin-bottom: 0px;font-size: 14px;") }}
+                                </div>
+                                <div class="form-group" style="margin-bottom: 0;">
+                                    {{ form.city.label(style="text-align: left;margin-bottom: 18px;margin-top: -5px;font-size: 12px;  margin-bottom: 0; margin-top: 0") }}
+                                    {{ form.city(class="form-control form-control-lg", style="height: 40px;border-color: #D32F2F;margin-bottom: 0px;font-size: 14px;") }}
+                                </div>
+                                <div class="form-group" style="margin-bottom: 0;">
+                                    {{ form.bloodgroup.label(style="text-align: left;margin-bottom: 18px;margin-top: -5px;font-size: 12px;  margin-bottom: 0; margin-top: 0") }}
+                                    {{ form.bloodgroup(class="form-control form-control-lg", style="height: 40px;border-color: #D32F2F;margin-bottom: 0px;font-size: 14px;") }}
+                                </div>
+                                <div class="form-group" style="margin-bottom: 0;">
+                                    {{ form.rhesus.label(style="text-align: left;margin-bottom: 18px;margin-top: -5px;font-size: 12px;  margin-bottom: 0; margin-top: 0") }}
+                                    {{ form.rhesus(class="form-control form-control-lg", style="height: 40px;border-color: #D32F2F;margin-bottom: 0px;font-size: 14px;") }}
+                                </div>
+                                <div class="form-group" style="margin-bottom: 0;">
+                                    {{ form.genotype.label(style="text-align: left;margin-bottom: 18px;margin-top: -5px;font-size: 12px;  margin-bottom: 0; margin-top: 0") }}
+                                    {{ form.genotype(class="form-control form-control-lg", style="height: 40px;border-color: #D32F2F;margin-bottom: 0px;font-size: 14px;") }}
                                 </div>
                                 <div class="form-group">
                                     {{ form.register(class="btn btn-primary btn-lg", style="width: 100%;font-size: 14px; font-weight: bold; padding: 16px;height: 40px;border-color: #D32F2F;background-color: #d32f2f;padding-top: 10px;margin-top: 19px;") }}

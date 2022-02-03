@@ -13,25 +13,25 @@
                                 <div class="row">
                                     <div class="col-lg-2"><img src={{ url_for("static", filename="img/unsplash_iFgRcqHznqg.png") }}></div>
                                     <div class="col" style="margin-left: 16px;">
-                                        <p style="margin-bottom: 1px;font-size: 14px;margin-top: 7px;">Oluwafemi Sanni</p>
-                                        <p style="margin-bottom: 0px;font-size: 12px;">Lagos, Nigeria</p>
+                                        <p style="margin-bottom: 1px;font-size: 14px;margin-top: 7px;">{{ current_user.first_name + " " + current_user.last_name}}</p>
+                                        <p style="margin-bottom: 0px;font-size: 12px;">{{ current_user.city}}, Nigeria</p>
                                     </div>
                                 </div>
                                 <div style="font-size: 20px;margin-top: 28px;">
                                     <p style="font-size: 12px;margin-bottom: 4px;color: #200e32;"><strong>Primary Address</strong></p>
-                                    <p style="font-size: 14px;color: rgb(154,154,154);width: 70%;">2A, McDonald Akano Street, Omole Phase 1, Lagos<br></p>
+                                    <p style="font-size: 14px;color: rgb(154,154,154);width: 70%;">{{ current_user.address }}<br></p>
                                 </div>
                                 <div style="font-size: 20px;margin-top: 20px;">
                                     <p style="font-size: 12px;margin-bottom: 4px;color: #200e32;"><strong>Blood Group</strong></p>
-                                    <p style="font-size: 14px;color: rgb(154,154,154);">O+</p>
+                                    <p style="font-size: 14px;color: rgb(154,154,154);">{{ current_user.bloodgroup.name }}</p>
                                 </div>
                                 <div style="font-size: 20px;margin-top: 20px;">
                                     <p style="font-size: 12px;margin-bottom: 4px;color: #200e32;"><strong>Genotype</strong></p>
-                                    <p style="font-size: 14px;color: rgb(154,154,154);">AA<br></p>
+                                    <p style="font-size: 14px;color: rgb(154,154,154);">{{ current_user.genotype }}<br></p>
                                 </div>
                                 <div style="font-size: 20px;margin-top: 20px;">
                                     <p style="font-size: 12px;margin-bottom: 4px;color: #200e32;"><strong>Contact Phone Number</strong></p>
-                                    <p style="font-size: 14px;color: rgb(154,154,154);">08166096074</p>
+                                    <p style="font-size: 14px;color: rgb(154,154,154);">{{ current_user.phone }}</p>
                                 </div>
                             </div>
                         </div>

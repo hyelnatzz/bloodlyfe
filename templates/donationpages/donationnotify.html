@@ -1,4 +1,4 @@
-{% include "./base.html" %}
+{% extends "./base.html" %}
 {% block title %} Notify {% endblock %}
 {% block content %}
     <div style="width: 100%;text-align: right;margin-top: 30px;"><a href={{ url_for("index") }} style="margin-right: 50px;text-decoration: none;font-weight: 500;color: #D32F2F;">Go Back to Dashboard</a></div>
@@ -25,9 +25,11 @@
                                 <p class="text-center" style="font-size: 12px;color: black;">Your donor has been notified</p>
                                 <div>
                                     <h1 style="font-size: 24px;font-weight: 700;color: #d32f2f;">Donor Information</h1>
-                                    <p style="color: #d32f2f;font-size: 14px;margin-bottom: -4px;"><strong>Didam Thinker</strong></p>
-                                    <p style="color: #d32f2f;margin-bottom: 0px;font-size: 12px;">3, Computer Village, Ikeja<br></p>
-                                    <p style="color: #d32f2f;font-size: 12px;">07034567681<br></p><button class="btn btn-primary btn-lg" type="button" style="font-size: 14px;padding: 16px;height: 45px;border-color: #001427;background-color: #001427;padding-top: 12px;margin-top: 10px;width: 140px;"><strong>Notify Donor</strong><br></button></div>
+                                    <p style="color: #d32f2f;font-size: 14px;margin-bottom: -4px;"><strong>{{ user.first_name + " " + user.last_name}}</strong></p>
+                                    <p style="color: #d32f2f;margin-bottom: 0px;font-size: 12px;">{{ user.address }}<br></p>
+                                    <p style="color: #d32f2f;font-size: 12px;">{{ user.phone }}<br></p>
+                                    <a href={{ url_for("dashboard") }} class="btn btn-primary btn-lg" type="button" style="font-size: 14px;padding: 16px;height: 45px;border-color: #001427;background-color: #001427;padding-top: 12px;margin-top: 10px;width: 140px;"><strong>Notify Donor</strong><br></a>
+                                </div>
                             </div>
                         </div>
                     </div>

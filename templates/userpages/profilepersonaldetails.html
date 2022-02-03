@@ -1,4 +1,4 @@
-{% include "./base.html" %}
+{% extends "./base.html" %}
 {% block title %} Profile {% endblock %}
 {% block content %}
     <div class="row">
@@ -11,6 +11,7 @@
                         <a href={{ url_for("medicalHistory")}} class="btn btn-primary btn-lg border rounded border-danger shadow-none" type="button" style="background-color: #fffefe;color: rgb(17,16,16);font-weight: bold;height: 42px;font-size: 14px;width: 150px;margin-bottom: 25px;">Medical History</a>
                         <a href="#" class="btn btn-primary btn-lg border rounded border-danger shadow-none" type="button" style="background-color: #fffefe;color: rgb(2,2,2);font-weight: bold;height: 42px;font-size: 14px;width: 150px;margin-bottom: 25px;">Messages</a>
                         <a href="#" class="btn btn-primary btn-lg border rounded border-danger shadow-none" type="button" style="background-color: #fffefe;color: rgb(9,9,9);font-weight: bold;height: 42px;font-size: 14px;width: 150px;">Help &amp; Support</a>
+                        <a href={{ url_for("logout")}} class="btn btn-primary btn-lg border rounded border-danger shadow-none" type="button" style="background-color: black;color: white;font-weight: bold;height: 42px;font-size: 14px;width: 150px;margin-bottom: 25px;margin-top: 30px;">Logout</a>
                     </div>
                 </div>
             </div>
@@ -31,8 +32,8 @@
                                     <div class="col-lg-4 offset-lg-0" style="padding: 0px;padding-right: 0px;padding-left: 31px;">
                                         <img src={{ url_for("static", filename="img/first/Ellipse1.png") }} style="height: 50px;margin-top: 1px;"></div>
                                     <div class="col-lg-8" style="padding-left: 0px;margin-left: 0px;">
-                                        <h2 class="display-1" style="font-size: 18px;color: rgb(252,252,252);margin: 1px;margin-bottom: 11px;margin-top: 3px;">Oluwafemi Sanni</h2>
-                                        <p style="font-size: 14px;margin-bottom: 0px;margin-top: -8px;color: rgb(245,245,245);">Lagos. Nigeria</p>
+                                        <h2 class="display-1" style="font-size: 18px;color: rgb(252,252,252);margin: 1px;margin-bottom: 11px;margin-top: 3px;">{{current_user.first_name + " " +current_user.last_name }}</h2>
+                                        <p style="font-size: 14px;margin-bottom: 0px;margin-top: -8px;color: rgb(245,245,245);">{{ current_user.city }}, {{ current_user.country}}</p>
                                     </div>
                                 </div>
                             </div>
@@ -52,6 +53,7 @@
                                     <div class="row">
                                         <div class="col">
                                             <form action={{ url_for("profileSettings") }} method="post">
+                                                {{ form.hidden_tag() }}
                                                 <div class="form-group">
                                                     {{ form.full_name.label(style="font-size: 12px; font-weight:bold;") }}
                                                     {{ form.full_name(class="form-control form-control-sm") }}
