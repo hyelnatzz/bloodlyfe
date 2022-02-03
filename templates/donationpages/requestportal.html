@@ -1,4 +1,5 @@
-{% include "./base.html" %}
+{% extends "./base.html" %}
+{% block title %} Request {% endblock %}
 {% block content %}
 <div style="width: 100%;text-align: right;margin-top: 30px;"><a href={{ url_for("index") }} style="margin-right: 50px;text-decoration: none;font-weight: 500;color: #D32F2F;">Go Back to Dashboard</a></div>
     <div style="margin: 50px auto;">
@@ -36,16 +37,28 @@
                         </div>
                         <div class="col" style="padding: 0 60px;padding-right: 0px;padding-left: 0px;border: 1px solid #e8e8e8;padding: 20px;border-radius: 15px;box-shadow: 1px 1px 5px #e8e8e8;color: black;padding-right: 20px;padding-left: 36px;">
                             <h1 style="font-weight: 700;font-size: 24px;margin-bottom: 15px;color: #001427;">Request Blood</h1>
-                            <form>
-                                <div class="form-group" style="margin-bottom: 10px;"><label style="font-size: 12px;"><strong>Hospital</strong></label><select class="form-control" style="font-size: 12px;"><optgroup label="select a laboratory near you"><option value="12" selected="">Newage laboratory</option><option value="13">This is item 2</option><option value="14">This is item 3</option></optgroup></select></div>
-                                <div
-                                    class="form-group" style="margin-bottom: 10px;"><label style="font-size: 12px;"><strong>Landmark</strong></label><select class="form-control" style="font-size: 12px;"><optgroup label="select a landmark close to you"><option value="12" selected="">Market square</option><option value="13">This is item 2</option><option value="14">This is item 3</option></optgroup></select></div>
-                        <div
-                            class="form-group"><label style="font-size: 12px;"><strong>Request Message</strong></label><textarea class="form-control form-control-lg" style="font-size: 12px;">Message...</textarea></div>
-                    <div class="form-group">
-                        <div class="form-check" style="margin-left: 24px;width: 70%;"><input class="form-check-input" type="checkbox" id="formCheck-1"><label class="form-check-label" for="formCheck-1" style="font-size: 11px;">By clicking this box, you have agreed to donate blood and save a life around your landmark<br></label></div>
-                    </div>
-                    <div class="form-group" style="text-align: right;"><button class="btn btn-primary btn-lg" type="button" style="font-size: 14px;padding: 16px;height: 45px;border-color: #001427;background-color: #001427;padding-top: 12px;margin-top: 10px;width: 140px;"><strong>Request</strong><br></button></div>
+                            <form action={{ url_for("requestPortal")}} method="post"> 
+                                {{ form.hidden_tag() }}
+                                <div class="form-group" style="margin-bottom: 10px;">
+                                    {{ form.hospital.label(style="font-size: 12px; font-weight: bold") }}
+                                    {{ form.hospital(class="form-control", style="font-size: 12px;") }}
+                                </div>
+                                <div class="form-group" style="margin-bottom: 10px;">
+                                    {{ form.landmark.label(style="font-size: 12px; font-weight: bold;") }}
+                                    {{ form.landmark(class="form-control", style="font-size: 12px;") }}
+                                </div>
+                                <div class="form-group">
+                                    {{ form.message.label(style="font-size: 12px;") }}
+                                    {{ form.message(class="form-control form-control-lg", style="font-size: 12px;") }}
+                                </div>
+                                <div class="form-group">
+                                    <div class="form-check" style="margin-left: 24px;width: 70%;">
+                                        {{ form.consent(class="form-check-input", type="checkbox", id="formCheck-1")}} {{ form.consent.label(class="form-check-label", for="formCheck-1", style="font-size: 11px;") }}
+                                    </div>
+                                </div>
+                            <div class="form-group" style="text-align: right;">
+                                {{ form.request(class="btn btn-primary btn-lg", type="submit", style="font-size: 14px;padding: 16px;height: 45px;border-color: #001427;background-color: #001427;padding-top: 12px;margin-top: 10px;width: 140px;") }} 
+                            </div>
                     </form>
                 </div>
             </div>

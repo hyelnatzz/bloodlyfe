@@ -18,19 +18,24 @@ a:hover {
   background-color: whitesmoke;
 }
 
+
+.form-control.form-control-lg:focus {
+  outline-color: rgb(211, 47, 47);
+}
+
 .btn.btn-primary.btn-lg.border.rounded.border-danger.shadow-none {
+  padding-top: 10px;
+}
+
+.btn.btn-primary.btn-lg.border.rounded.border-danger.shadow-none:hover {
+  background-color: rgba(211, 47, 47, .1) !important;
 }
 
 .btn.btn-primary.border.rounded.border-white.shadow-none {
+  padding-top: 10px;
+
 }
 
-.form-control.form-control-lg {
+.btn.btn-primary.border.rounded.border-white.shadow-none:hover {
+    background-color: rgba(211, 47, 47, .9) !important;
 }
-
-.form-control.form-control-lg {
-}
-
-.form-control.form-control-lg:focus {
-  outline-color: #D32F2F;
-}
-

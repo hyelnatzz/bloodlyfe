@@ -1,8 +1,9 @@
 from flask import Flask, render_template
 from forms import *
-
+from config import Config
 
 app = Flask(__name__)
+app.config.from_object(Config)
 
 @app.errorhandler(404)
 def errorhandler(error):
@@ -13,14 +14,19 @@ def index():
     return render_template('index.html')
 
 
-@app.route('/login')
+@app.route('/login', methods=["POST", "GET"])
 def login():
-    return render_template('authpages/login.html')
+    form = LoginForm()
+    if form.validate_on_submit():
+        print(form.email.data)
+    return render_template('authpages/login.html', form = form)
 
 
-@app.route('/register')
+@app.route('/register', methods=["POST", "GET"])
 def register():
     form = RegisterForm()
+    if form.validate_on_submit():
+        print(form.phone.data)
     return render_template('authpages/register.html', form=form)
 
 
@@ -34,9 +40,10 @@ def dashboard():
     return render_template('userpages/maindashboard.html')
 
 
-@app.route('/profile-settings')
+@app.route('/profile-settings', methods=["POST", "GET"])
 def profileSettings():
-    return render_template('userpages/profilepersonaldetails.html')
+    form = ProfileUpdateForm()
+    return render_template('userpages/profilepersonaldetails.html', form = form)
 
 
 @app.route('/history')
@@ -54,14 +61,20 @@ def matchSuccess():
     return render_template('donationpages/donationnotify.html')
 
 
-@app.route('/donation-portal')
+@app.route('/donation-portal', methods=["POST", "GET"])
 def donationPortal():
-    return render_template('donationpages/donationportal.html')
+    form = DonationForm()
+    if form.validate_on_submit():
+        print("done")
+    return render_template('donationpages/donationportal.html', form = form)
 
 
-@app.route('/request-portal')
+@app.route('/request-portal', methods=["POST", "GET"])
 def requestPortal():
-    return render_template('donationpages/requestportal.html')
+    form = RequestForm()
+    if form.validate_on_submit():
+        print("done")
+    return render_template('donationpages/requestportal.html', form = form)
 
 
 
